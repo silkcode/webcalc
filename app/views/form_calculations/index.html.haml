@@ -1,0 +1,17 @@
+%h1 Listing form_calculations
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @form_calculations.each do |form_calculation|
+    %tr
+      %td= link_to 'Show', form_calculation
+      %td= link_to 'Edit', edit_form_calculation_path(form_calculation)
+      %td= link_to 'Destroy', form_calculation, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Form calculation', new_form_calculation_path
