@@ -24,6 +24,8 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'mongoid', '~> 3.0.0'
 gem 'bson_ext'
+gem 'simple_form'
+gem 'backbone-on-rails'
 
 group :production do
   gem 'thin'

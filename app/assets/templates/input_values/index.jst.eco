@@ -1,0 +1,7 @@
+<h1>Webcalc</h1>
+
+<ul>
+    <% for entry in @input_values.models: %>
+    <li><input value="<%= entry.get('name') %>"></li>
+    <% end %>
+</ul>

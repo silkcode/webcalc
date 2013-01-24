@@ -1,5 +1,11 @@
 Webcalc::Application.routes.draw do
-  resources :form_calculations
+
+  root :to => "home#index"
+
+  scope "api" do
+    resources :entries
+    resources :input_values
+  end
 
 
   # The priority is based upon order of creation:
