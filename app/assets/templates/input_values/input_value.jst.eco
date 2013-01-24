@@ -1,0 +1,1 @@
+<input id="<%= @input_value.get('id')%>" value="<%= @input_value.get('value')%>">

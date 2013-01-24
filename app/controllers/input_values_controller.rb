@@ -2,26 +2,22 @@ class InputValuesController < ApplicationController
   respond_to :json
 
   def index
-    #if session[:entry_id]
-    #  respond_with Entry.find(session[:entry_id])
-    #else
-    #  entry = Entry.create!()
-    #  session[:entry_id] = entry.id
-    #  respond_with entry
-    #end
-    respond_with Entry.first.input_values
-  end
-
-  def show
-    respond_with InputValue.find(params[:id])
+    if session[:entry_id] && (entry = Entry.find(session[:entry_id]))
+      respond_with entry.input_values
+    else
+      entry = Entry.create()
+      session[:entry_id] = entry.id
+      respond_with entry.input_values
+    end
   end
 
   def create
-    respond_with InputValue.create(params[:entry])
+    entry = Entry.find(session[:entry_id])
+    respond_with entry.input_values.create(params[:input_value])
   end
 
   def update
-    respond_with InputValue.update(params[:id], params[:entry])
+    respond_with InputValue.update(params[:id], params[:input_value])
   end
 
   def destroy
