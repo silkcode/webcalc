@@ -4,7 +4,6 @@ class Webcalc.Views.InputValuesIndex extends Backbone.View
 
   events:
     'submit #new_input_value': 'createInputValue'
-    'input #input_values': 'recalculateInputValue'
 
   initialize: ->
     @collection.on('reset', @render, this)
@@ -21,8 +20,6 @@ class Webcalc.Views.InputValuesIndex extends Backbone.View
 
   createInputValue: (event) ->
     event.preventDefault()
-    @collection.create name: '', result: '', value: ''
-
-  recalculateInputValue: (event) ->
-    event.preventDefault()
-    alert @el.id
+    @collection.create name: '', result: '', value: '',
+      wait: true
+      success: -> $('#new_input_value')[0].reset()

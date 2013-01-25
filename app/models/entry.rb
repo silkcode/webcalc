@@ -1,4 +1,5 @@
 class Entry
   include Mongoid::Document
-  embeds_many :input_values
+  has_many :input_values
+  #embeds_many :input_values
 end

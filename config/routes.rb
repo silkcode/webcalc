@@ -7,6 +7,8 @@ Webcalc::Application.routes.draw do
     resources :input_values
   end
 
+  put '/api/input_values', :to => 'input_values#update'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,7 +1,8 @@
 class InputValue
   include Mongoid::Document
-  field :name
+  field :id
   field :value
   field :result
-  embedded_in :entry, :inverse_of => :input_values
+  belongs_to :entry
+  #embedded_in :entry, :inverse_of => :input_values
 end

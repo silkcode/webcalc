@@ -5,7 +5,7 @@ class InputValuesController < ApplicationController
     if session[:entry_id] && (entry = Entry.find(session[:entry_id]))
       respond_with entry.input_values
     else
-      entry = Entry.create()
+      entry = Entry.create
       session[:entry_id] = entry.id
       respond_with entry.input_values
     end
@@ -17,7 +17,11 @@ class InputValuesController < ApplicationController
   end
 
   def update
-    respond_with InputValue.update(params[:id], params[:input_value])
+    input = InputValue.find(params[:_id])
+    input.value = params[:value]
+    input.result = params[:value]
+    input.save
+    respond_with input
   end
 
   def destroy
