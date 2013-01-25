@@ -15,7 +15,8 @@ class Webcalc.Views.InputValue extends Backbone.View
     this
 
   changeInputValue: ->
-    $(@el).html(@template(input_value: @model.fetch()))
+    @model.fetch()             #todo: solve problem with update model
+    $(@el).html(@template(input_value: @model))
     this
 
   recalculateInputValues: (event) ->
@@ -25,4 +26,4 @@ class Webcalc.Views.InputValue extends Backbone.View
     model.set("value": value)
     model.save
       wait: true
-    model.trigger('changeInput', model)
+    model.trigger('changeInput')

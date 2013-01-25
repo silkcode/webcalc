@@ -19,7 +19,7 @@ class InputValuesController < ApplicationController
   def update
     input = InputValue.find(params[:_id])
     input.value = params[:value]
-    input.result = params[:value]
+    input.result = eval params[:value]  #todo: when have list of operation add own parser
     input.save
     respond_with input
   end
