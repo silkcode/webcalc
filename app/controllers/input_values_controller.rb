@@ -17,8 +17,9 @@ class InputValuesController < ApplicationController
   end
 
   def update
-    input = InputValue.find(params[:_id])
+    input = InputValue.find(params[:id])
     input.value = params[:value]
+    input.id = params[:id]
     input.result = eval params[:value]  #todo: when have list of operation add own parser
     input.save
     render :json => input
