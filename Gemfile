@@ -34,6 +34,11 @@ gem 'backbone-on-rails'
 group :production do
   gem 'thin'
 end
+
+group :development do
+  gem 'debugger'
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

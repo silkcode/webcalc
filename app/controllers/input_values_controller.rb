@@ -21,7 +21,7 @@ class InputValuesController < ApplicationController
     input.value = params[:value]
     input.result = eval params[:value]  #todo: when have list of operation add own parser
     input.save
-    respond_with input
+    render :json => input
   end
 
   def destroy
