@@ -7,9 +7,13 @@ gem 'rails', '3.2.11'
 
 gem 'sqlite3'
 
+gem 'less-rails', '2.2.6'
+gem 'twitter-bootstrap-rails', '2.2.0'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
+  gem 'therubyracer', '0.11.3'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'haml-rails'

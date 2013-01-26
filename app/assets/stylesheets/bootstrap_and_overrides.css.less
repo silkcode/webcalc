@@ -1,0 +1,144 @@
+@import "twitter/bootstrap/bootstrap";
+@import "twitter/bootstrap/responsive";
+
+// Set the correct sprite paths
+@iconSpritePath: asset-path("twitter/bootstrap/glyphicons-halflings");
+@iconWhiteSpritePath: asset-path("twitter/bootstrap/glyphicons-halflings-white");
+
+// Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
+// Note: If you use asset_path() here, your compiled bootstrap_and_overrides.css will not
+//       have the proper paths. So for now we use the absolute path.
+@fontAwesomeEotPath: asset-path("fontawesome-webfont.eot");
+@fontAwesomeEotPath_iefix: asset-path("fontawesome-webfont.eot#iefix");
+@fontAwesomeWoffPath: asset-path("fontawesome-webfont.woff");
+@fontAwesomeTtfPath: asset-path("fontawesome-webfont.ttf");
+@fontAwesomeSvgPath: asset-path("fontawesome-webfont.svg");
+
+// Font Awesome
+@import "fontawesome";
+
+// Glyphicons
+//@import "twitter/bootstrap/sprites.less";
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/customize.html#variables for their names and documentation
+//
+// Example:
+// @linkColor: #ff0000;
+
+/* Global setup
+--------------------------------------------------------------------------------*/
+html {
+  height: 100%;
+  min-height: 100%;
+  background: #fff;
+}
+
+body {
+  height: 100%;
+  min-height: 100%;
+  font-size: 9pt;
+  font-weight: normal;
+  background: #fff;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.container {
+  position: relative;
+  height: 100%;
+  text-align: center;
+}
+
+/* Helpers
+--------------------------------------------------------------------------------*/
+// A way to vertically align blocks
+.inliner {
+  height: 100%;
+}
+
+.inliner,
+.inliner + * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.clear { clear: both; }
+
+.clear:after {
+  content: ".";
+  display: block;
+  clear: both;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  visibility: hidden;
+}
+
+// Padding and margin helpers
+.ptn, .pvn, .pan { padding-top: 0 !important }
+.ptss, .pvss, .pass { padding-top: 5px !important }
+.pts, .pvs, .pas { padding-top: 10px !important }
+.ptm, .pvm, .pam { padding-top: 20px !important }
+.ptl, .pvl, .pal { padding-top: 30px !important }
+.prn, .phn, .pan { padding-right: 0 !important }
+.prss, .phss, .pass { padding-right: 5px !important }
+.prs, .phs, .pas { padding-right: 10px !important }
+.prm, .phm, .pam { padding-right: 20px !important }
+.prl, .phl, .pal { padding-right: 30px !important }
+.pbn, .pvn, .pan { padding-bottom: 0 !important }
+.pbss, .pvss, .pass { padding-bottom: 5px !important }
+.pbs, .pvs, .pas { padding-bottom: 10px !important }
+.pbm, .pvm, .pam { padding-bottom: 20px !important }
+.pbl, .pvl, .pal { padding-bottom: 30px !important }
+.pln, .phn, .pan { padding-left: 0 !important }
+.plss, .phss, .pass { padding-left: 5px !important }
+.pls, .phs, .pas { padding-left: 10px !important }
+.plm, .phm, .pam { padding-left: 20px !important }
+.pll, .phl, .pal { padding-left: 30px !important }
+.mtn, .mvn, .man { margin-top: 0 !important }
+.mtss, .mvss, .mass { margin-top: 5px !important }
+.mts, .mvs, .mas { margin-top: 10px !important }
+.mtm, .mvm, .mam { margin-top: 20px !important }
+.mtl, .mvl, .mal { margin-top: 30px !important }
+.mrn, .mhn, .man { margin-right: 0 !important }
+.mrss, .mhss, .mass { margin-right: 5px !important }
+.mrs, .mhs, .mas { margin-right: 10px !important }
+.mrm, .mhm, .mam { margin-right: 20px !important }
+.mrl, .mhl, .mal { margin-right: 30px !important }
+.mbn, .mvn, .man { margin-bottom: 0 !important }
+.mbss, .mvss, .mass { margin-bottom: 5px !important }
+.mbs, .mvs, .mas { margin-bottom: 10px !important }
+.mbm, .mvm, .mam { margin-bottom: 20px !important }
+.mbl, .mvl, .mal { margin-bottom: 30px !important }
+.mln, .mhn, .man { margin-left: 0 !important }
+.mlss, .mhss, .mass { margin-left: 5px !important }
+.mls, .mhs, .mas { margin-left: 10px !important }
+.mlm, .mhm, .mam { margin-left: 20px !important }
+.mll, .mhl, .mal { margin-left: 30px !important }
+
+// Block width helpers
+.size1of1 { width: 100%; float: none; }
+.size1of2 { width: 50%; }
+.size1of3 { width: 33.33333%; }
+.size1of4 { width: 25%; }
+.size1of5 { width: 20%; }
+.size1of6 { width: 16.6666666%; }
+.size1of7 { width: 14.2857143%; }
+.size1of8 { width: 12.5%; }
+.size2of3 { width: 66.66666%; }
+.size2of5 { width: 40%; }
+.size2of7 { width: 28.5714286%; }
+.size3of4 { width: 75%; }
+.size3of5 { width: 60%; }
+.size3of7 { width: 42.8571429%; }
+.size4of5 { width: 80%; }
+.size4of7 { width: 57.1428572%; }
+.size5of6 { width: 83.3333333%; }
+.size5of7 { width: 71.4285715%; }
+.size6of7 { width: 85.7142858%; }

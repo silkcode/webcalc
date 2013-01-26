@@ -1,11 +1,15 @@
 <h1>Webcalc</h1>
 
-<ul id="input_values" >
+<div id="input_values" class="clear pbm">
 
-</ul>
+</div>
 
-<form id="new_input_value">
-    <input type="submit" value="Add">
-</form>
+<div class="row">
+  <div class="span">
+    <form id="new_input_value" class="pull-left mrs">
+        <input type="submit" class="btn btn-primary" value="Add Field">
+    </form>
 
-<button id="share">Share</button>
+    <button id="share" class="btn btn-success">Share</button>
+  </div>
+</div>

@@ -1,1 +1,1 @@
-<input id="<%= @input_value.get('_id')%>" value="<%= @input_value.get('value')%>"><p id=<%= "input_" + @input_value.get('_id')%>><%= @input_value.get('result')%></p>
+<input type="text" class="input-xlarge pull-left" id="<%= @input_value.get('_id')%>" value="<%= @input_value.get('value')%>"><p class="pull-left ptss plm" id=<%= "input_" + @input_value.get('_id')%>><%= @input_value.get('result')%></p>

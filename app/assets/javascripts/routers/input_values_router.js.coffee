@@ -9,8 +9,8 @@ class Webcalc.Routers.InputValues extends Backbone.Router
 
   index: ->
     view = new Webcalc.Views.InputValuesIndex(collection: @collection)
-    $('#container').html(view.render().el)
+    $('#calc').html(view.render().el)
 
   show: ->
     view = new Webcalc.Views.InputValuesIndex(collection: @collection)
-    $('#container').html(view.render().el)
+    $('#calc').html(view.render().el)
